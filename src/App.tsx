@@ -87,7 +87,6 @@ const App: React.FC = () => {
         <ambientLight />
         <OrbitControls target={[0, 0.3, 0]} enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} />
         <Environment ground={{ height: 32, radius: 150, scale: 10 }} preset={env} background />
-        {/* <Stats /> */}
       </Canvas>
       <div style={{
         position: 'absolute',
@@ -98,24 +97,39 @@ const App: React.FC = () => {
         height: '100vh',
         pointerEvents: 'none',
       }}>
-        <img
-          style={{
-            bottom: '30px',
-            left: '30px',
-            position: 'absolute',
-            height: '100px'
-          }}
-          src="cc.svg"
-        />
-        <img
-          style={{
-            bottom: '30px',
-            left: '190px',
-            position: 'absolute',
-            height: '100px'
-          }}
-          src="beerjs.svg"
-        />
+        <a
+          href="https://codechem.com"
+          target="_blank"
+          style={{ pointerEvents: 'all' }}
+        >
+          <img
+            alt="CodeChem"
+            style={{
+              bottom: '80px',
+              left: '30px',
+              position: 'absolute',
+              height: '100px'
+            }}
+            src="cc.svg"
+          />
+        </a>
+
+        <a
+          href="https://beerjs.mk"
+          target="_blank"
+          style={{ pointerEvents: 'all' }}
+        >
+          <img
+            alt="Beer JS"
+            style={{
+              bottom: '200px',
+              left: '35px',
+              position: 'absolute',
+              height: '100px'
+            }}
+            src="beerjs.svg"
+          />
+        </a>
         {showControls && (<div
           style={{
             top: '10px',
@@ -159,7 +173,7 @@ const App: React.FC = () => {
         <button
           onClick={() => setShowControls(!showControls)}
           style={{
-            bottom: '10px',
+            bottom: '100px',
             position: 'absolute',
             right: '10px',
             pointerEvents: 'all',
